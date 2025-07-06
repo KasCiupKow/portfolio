@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowDown, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaArrowDown, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -30,18 +30,19 @@ const Hero = () => {
 
           {/* Name */}
           <h1 className="text-5xl md:text-7xl font-bold text-secondary-900 mb-6 animate-slide-up">
-            <span className="gradient-text">Katarzyna Ciupek-Kownacka</span>
+            <span className="gradient-text">Katarzyna</span>
+            <br />
+            <span className="gradient-text">Ciupek-Kownacka</span>
           </h1>
 
-          {/* Title */}
-          <h2 className="text-2xl md:text-3xl text-secondary-600 mb-8 animate-slide-up">
-            HR Specialist | Komunikacja Wewnętrzna
-          </h2>
+          
+          <br></br>
+
 
           {/* Description */}
           <p className="text-lg md:text-xl text-secondary-600 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up">
-            Projektuję i wdrażam rozwiązania HR, które wspierają rozwój pracowników i budują pozytywną kulturę organizacyjną. 
-            Specjalizuję się w komunikacji wewnętrznej, procesach onboardingowych i analizie potrzeb rozwojowych.
+            Łączę doświadczenie medyczne z pasją do HR i analizy biznesowej. Rozwijam kompetencje w zarządzaniu projektami, 
+            metodykach Agile/Scrum oraz procesach optymalizacji organizacyjnej opartych na danych.
           </p>
 
           {/* CTA Buttons */}
@@ -62,15 +63,6 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12 animate-slide-up">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary-500 hover:text-primary-600 transition-colors duration-200"
-              aria-label="GitHub"
-            >
-              <FaGithub className="w-6 h-6" />
-            </a>
             <a
               href="https://linkedin.com"
               target="_blank"

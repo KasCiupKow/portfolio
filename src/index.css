@@ -40,4 +40,85 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
   }
+  
+  /* Markdown styles */
+  .prose {
+    @apply text-gray-900;
+  }
+  
+  .prose h1 {
+    @apply text-3xl font-normal mb-4 text-gray-900;
+  }
+  
+  .prose h2 {
+    @apply text-xl font-normal mb-3 mt-6 text-gray-900;
+  }
+  
+  .prose h3 {
+    @apply text-lg font-normal mb-2 mt-4 text-gray-900;
+  }
+  
+  .prose p {
+    @apply mb-4 text-gray-700 leading-relaxed;
+  }
+  
+  .prose ul {
+    @apply mb-4 list-disc list-inside text-gray-700;
+  }
+  
+  .prose ol {
+    @apply mb-4 list-decimal list-inside text-gray-700;
+  }
+  
+  .prose li {
+    @apply mb-1;
+  }
+  
+  .prose strong {
+    @apply font-normal text-gray-900;
+  }
+  
+  .prose table {
+    @apply w-full border-collapse mb-4;
+  }
+  
+  .prose th {
+    @apply text-left py-2 px-4 border-b border-gray-200 font-normal text-gray-500;
+  }
+  
+  .prose td {
+    @apply py-2 px-4 border-b border-gray-200 text-gray-700;
+  }
+  
+  .prose tr:last-child td {
+    @apply border-b-0;
+  }
+  
+  .prose img {
+    @apply max-w-full h-auto rounded-lg shadow-md my-4;
+  }
+  
+  .prose table {
+    @apply w-full border-collapse mb-6 overflow-x-auto;
+  }
+  
+  .prose thead {
+    @apply bg-gray-50;
+  }
+  
+  .prose th {
+    @apply text-left py-3 px-4 border-b-2 border-gray-200 font-semibold text-gray-700 text-sm;
+  }
+  
+  .prose td {
+    @apply py-3 px-4 border-b border-gray-100 text-gray-700 text-sm;
+  }
+  
+  .prose tr:hover {
+    @apply bg-gray-50;
+  }
+  
+  .prose tr:last-child td {
+    @apply border-b-0;
+  }
 } 

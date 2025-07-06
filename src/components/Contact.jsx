@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,9 +56,7 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
   ];
 
   return (
@@ -228,7 +226,7 @@ const Contact = () => {
                 Dostępność
               </h4>
               <p className="text-secondary-600 mb-4">
-                Jestem dostępny do nowych projektów i współpracy. 
+                Jestem dostępna do nowych projektów i współpracy. 
                 Odpowiadam na wiadomości w ciągu 24 godzin.
               </p>
               <div className="flex items-center space-x-2">
