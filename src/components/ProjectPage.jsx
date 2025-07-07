@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 // Komponent do obsługi obrazów w Markdown
 const Image = ({ src, alt, ...props }) => {
@@ -87,7 +88,10 @@ const ProjectPage = () => {
         </button>
         
         <div className="prose prose-gray max-w-none">
-          <ReactMarkdown components={{ img: Image }}>
+          <ReactMarkdown 
+            remarkPlugins={[remarkGfm]}
+            components={{ img: Image }}
+          >
             {markdownContent}
           </ReactMarkdown>
         </div>
