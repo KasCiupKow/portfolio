@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
 // Komponent do obsługi obrazów w Markdown
 const Image = ({ src, alt, ...props }) => {
   // Jeśli src zaczyna się od /, to jest to ścieżka względna do public
-  const imageSrc = src.startsWith('/') ? src : `/projects/${src}`;
+  const imageSrc = src.startsWith('/') ? src : `/portfolio/projects/${src}`;
   
   return (
     <img 
@@ -27,7 +27,7 @@ const ProjectPage = () => {
   useEffect(() => {
     const loadMarkdown = async () => {
       try {
-        const response = await fetch(`/projects/project-${id}.md`);
+        const response = await fetch(`/portfolio/projects/project-${id}.md`);
         if (response.ok) {
           const content = await response.text();
           setMarkdownContent(content);
