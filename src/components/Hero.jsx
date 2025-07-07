@@ -73,7 +73,7 @@ const Hero = () => {
               <FaLinkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:katarzyna.ciupek.kownacka@gmail.com"
+              href="mailto:katarzyna.kownacka7@gmail.com@gmail.com"
               className="text-secondary-500 hover:text-primary-600 transition-colors duration-200"
               aria-label="Email"
             >

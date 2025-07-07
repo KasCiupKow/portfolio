@@ -38,8 +38,8 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: 'Email',
-      value: 'katarzyna.ciupek.kownacka@gmail.com',
-      href: 'mailto:katarzyna.ciupek.kownacka@gmail.com'
+      value: 'katarzyna.kownacka7@gmail.com@gmail.com',
+      href: 'mailto:katarzyna.kownacka7@gmail.com@gmail.com'
     },
     {
       icon: FaPhone,
