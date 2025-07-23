@@ -264,7 +264,7 @@ const About = () => {
             <h4 className="text-2xl font-bold text-secondary-900 mb-8 text-center">
               Certyfikaty
             </h4>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {certificates.map((cert, index) => (
                 <div key={index} className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border border-primary-200 hover:shadow-lg transition-all duration-200 hover:scale-105">
                   <div className="flex items-center mb-4">
