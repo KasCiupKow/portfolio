@@ -121,4 +121,17 @@
   .prose tr:last-child td {
     @apply border-b-0;
   }
+  
+  /* Harmonogram styles */
+  .prose h3 + ul {
+    @apply space-y-4;
+  }
+  
+  .prose h3 + ul li {
+    @apply bg-gray-50 p-4 rounded-lg border border-gray-200;
+  }
+  
+  .prose h3 + ul li strong {
+    @apply text-primary-600 font-semibold;
+  }
 } 

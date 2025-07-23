@@ -24,7 +24,7 @@ const About = () => {
   const experiences = [
     {
       title: 'Prywatna Przychodnia Salve',
-      company: 'Administrowanie dokumentacją personalną',
+      company: 'Wykonywanie procedur medycznych oraz Administrowanie dokumentacji personalnej',
       period: 'wrzesień 2024 r. - aktualnie',
       description: 'Administrowanie dokumentacją personalną z dbałością i zgodności z RODO. Bieżąca współpraca i wsparcie personelu medycznego w zakresie organizacji pracy.'
     },
@@ -107,7 +107,7 @@ const About = () => {
             O <span className="gradient-text">mnie</span>
           </h2>
           <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-            Jestem pasjonatką HR z doświadczeniem w projektowaniu procesów personalnych i budowaniu pozytywnego środowiska pracy.
+            
           </p>
         </div>
 
@@ -126,7 +126,7 @@ const About = () => {
               <p>
                 Cechuje mnie dyscyplina, dobra organizacja pracy i umiejętność skutecznego 
                 zarządzania czasem w dynamicznym środowisku. Moje mocne strony według testu 
-                Gallupa to empatia, rozwijanie innych, odpowiedzialność i umiejętność naprawiania.
+                Gallupa to empatia, rozwijanie innych, odpowiedzialność, umiejętność naprawiania i organizacja.
               </p>
               <p>
                 Łączę doświadczenie medyczne z pasją do HR i analizy biznesowej. 

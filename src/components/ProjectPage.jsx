@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 // Komponent do obsługi obrazów w Markdown
 const Image = ({ src, alt, ...props }) => {
@@ -27,11 +28,15 @@ const ProjectPage = () => {
   useEffect(() => {
     const loadMarkdown = async () => {
       try {
+        console.log('Ładowanie projektu ID:', id);
         const response = await fetch(`/portfolio/projects/project-${id}.md`);
+        console.log('Status odpowiedzi:', response.status);
         if (response.ok) {
           const content = await response.text();
+          console.log('Zawartość pliku:', content.substring(0, 100) + '...');
           setMarkdownContent(content);
         } else {
+          console.error('Błąd HTTP:', response.status, response.statusText);
           setMarkdownContent('# Projekt nie został znaleziony\n\nProjekt o podanym ID nie istnieje.');
         }
       } catch (error) {
@@ -63,7 +68,7 @@ const ProjectPage = () => {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="text-gray-500">Ładowanie...</div>
+          <div className="text-gray-500">Ładowanie projektu {id}...</div>
         </div>
       </div>
     );
@@ -88,12 +93,17 @@ const ProjectPage = () => {
         </button>
         
         <div className="prose prose-gray max-w-none">
-          <ReactMarkdown 
-            remarkPlugins={[remarkGfm]}
-            components={{ img: Image }}
-          >
-            {markdownContent}
-          </ReactMarkdown>
+          {markdownContent ? (
+            <ReactMarkdown 
+              components={{ img: Image }}
+              remarkPlugins={[]}
+              rehypePlugins={[rehypeRaw]}
+            >
+              {markdownContent}
+            </ReactMarkdown>
+          ) : (
+            <div className="text-red-500">Brak zawartości do wyświetlenia</div>
+          )}
         </div>
       </div>
     </div>
