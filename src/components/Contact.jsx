@@ -62,45 +62,42 @@ const Contact = () => {
                 ))}
             </div>
 
-        {/* Bottom Section */}
+                {/* Bottom Section */}
         <div className="grid lg:grid-cols-2 gap-8">
-            {/* Social Links */}
-          <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl text-center">
+          {/* Social Links */}
+          <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl text-center flex flex-col justify-center">
             <h3 className="text-xl font-bold text-secondary-900 mb-4">
-                Znajdź mnie w sieci
-              </h3>
+              Znajdź mnie w sieci
+            </h3>
             <p className="text-secondary-600 mb-6 text-sm">
               Śledź moje aktualności zawodowe i nawiąż kontakt przez LinkedIn
             </p>
             <div className="flex justify-center">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-white text-primary-600 rounded-lg font-medium hover:bg-primary-600 hover:text-white transition-all duration-200 shadow-sm hover:shadow-md group text-sm"
-                    aria-label={social.label}
-                  >
+                  aria-label={social.label}
+                >
                   <social.icon className="w-4 h-4 mr-2 group-hover:scale-105 transition-transform duration-200" />
                   Sprawdź mój {social.label}
-                  </a>
-                ))}
-              </div>
+                </a>
+              ))}
             </div>
+          </div>
 
-            {/* Availability */}
+          {/* Availability */}
           <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center">
-            <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-green-200 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
-            </div>
             <h4 className="text-xl font-bold text-secondary-900 mb-3">
-                Dostępność
-              </h4>
+              Dostępność
+            </h4>
             <p className="text-secondary-600 mb-4 text-sm leading-relaxed">
-                Jestem dostępna do nowych projektów i współpracy. 
-                Odpowiadam na wiadomości w ciągu 24 godzin.
-              </p>
+              Jestem dostępna do nowych projektów i współpracy. 
+              Odpowiadam na wiadomości w ciągu 24 godzin.
+            </p>
             <div className="inline-flex items-center px-3 py-1 bg-white rounded-full shadow-sm">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
               <span className="text-green-600 font-medium text-sm">Dostępna do projektów</span>
