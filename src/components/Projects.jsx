@@ -211,7 +211,7 @@ const Projects = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
-            Moje <span className="gradient-text">projekty</span>
+            Moje projekty
           </h2>
           <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
             Oto wybór moich projektów HR. Każdy z nich pokazuje praktyczne zastosowanie 

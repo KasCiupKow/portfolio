@@ -30,7 +30,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/katarzyna-ciupek-kownacka-398a4a257/', label: 'LinkedIn' },
   ];
 
   return (

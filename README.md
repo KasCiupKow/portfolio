@@ -120,9 +120,9 @@ Zachęcam do zgłaszania błędów i propozycji ulepszeń poprzez Issues na GitH
 
 ## 📞 Kontakt
 
-- **Email**: katarzyna.kownacka7@gmail.com@gmail.com
+- **Email**: katarzyna.kownacka7@gmail.com
 
-- **LinkedIn**: [linkedin.com/in/katarzyna-ciupek-kownacka](https://linkedin.com)
+- **LinkedIn**: [linkedin.com/in/katarzyna-ciupek-kownacka-398a4a257](https://www.linkedin.com/in/katarzyna-ciupek-kownacka-398a4a257/)
 
 ---
 

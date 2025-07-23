@@ -1,62 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Symulacja wysyłania formularza
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus(null), 3000);
-    }, 1500);
-  };
 
   const contactInfo = [
     {
       icon: FaEnvelope,
       title: 'Email',
-      value: 'katarzyna.kownacka7@gmail.com@gmail.com',
-      href: 'mailto:katarzyna.kownacka7@gmail.com@gmail.com'
+      value: 'katarzyna.kownacka7@gmail.com',
+      href: 'mailto:katarzyna.kownacka7@gmail.com'
     },
     {
       icon: FaPhone,
       title: 'Telefon',
-      value: '+48 123 456 789',
-      href: 'tel:+48123456789'
+      value: '+48 733 717 100',
+      href: 'tel:+48733717100'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Lokalizacja',
-      value: 'Kraków, Polska',
+      value: 'Łódź, Polska',
       href: null
     }
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/katarzyna-ciupek-kownacka-398a4a257/', label: 'LinkedIn' },
   ];
 
   return (
@@ -64,175 +33,77 @@ const Contact = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
-            Skontaktuj się ze <span className="gradient-text">mną</span>
+            Skontaktuj się ze mną
           </h2>
           <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
             Szukasz wsparcia w projektach HR? Chętnie porozmawiam o możliwościach współpracy w obszarze komunikacji wewnętrznej i procesów personalnych!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="card">
-            <h3 className="text-2xl font-bold text-secondary-900 mb-6">
-              Wyślij wiadomość
-            </h3>
-            
-            {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800 font-medium">
-                  ✅ Dziękuję! Twoja wiadomość została wysłana. Odpowiem najszybciej jak to możliwe.
-                </p>
+        {/* Contact Information Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {contactInfo.map((info, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 text-center group">
+              <div className="w-12 h-12 bg-gradient-to-r from-primary-100 to-primary-200 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-200">
+                <info.icon className="w-6 h-6 text-primary-600" />
               </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-secondary-700 mb-2">
-                    Imię i nazwisko *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Twoje imię i nazwisko"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="twoj.email@example.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-secondary-700 mb-2">
-                  Temat *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                  placeholder="Temat wiadomości"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-secondary-700 mb-2">
-                  Wiadomość *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none"
-                  placeholder="Opisz swój projekt lub pytanie..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    Wysyłanie...
-                  </>
-                ) : (
-                  'Wyślij wiadomość'
-                )}
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-6">
-                Informacje kontaktowe
-              </h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-primary-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-secondary-900">{info.title}</h4>
+              <h4 className="text-lg font-bold text-secondary-900 mb-2">{info.title}</h4>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-secondary-600 hover:text-primary-600 transition-colors duration-200"
+                  className="text-base text-secondary-600 hover:text-primary-600 transition-colors duration-200 font-medium"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-secondary-600">{info.value}</p>
+                <p className="text-base text-secondary-600 font-medium">{info.value}</p>
                       )}
-                    </div>
                   </div>
                 ))}
-              </div>
             </div>
 
+        {/* Bottom Section */}
+        <div className="grid lg:grid-cols-2 gap-8">
             {/* Social Links */}
-            <div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-6">
+          <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl text-center">
+            <h3 className="text-xl font-bold text-secondary-900 mb-4">
                 Znajdź mnie w sieci
               </h3>
-              <div className="flex space-x-4">
+            <p className="text-secondary-600 mb-6 text-sm">
+              Śledź moje aktualności zawodowe i nawiąż kontakt przez LinkedIn
+            </p>
+            <div className="flex justify-center">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600 hover:bg-primary-100 hover:text-primary-600 transition-all duration-200"
+                  className="inline-flex items-center px-4 py-2 bg-white text-primary-600 rounded-lg font-medium hover:bg-primary-600 hover:text-white transition-all duration-200 shadow-sm hover:shadow-md group text-sm"
                     aria-label={social.label}
                   >
-                    <social.icon className="w-6 h-6" />
+                  <social.icon className="w-4 h-4 mr-2 group-hover:scale-105 transition-transform duration-200" />
+                  Sprawdź mój {social.label}
                   </a>
                 ))}
               </div>
             </div>
 
             {/* Availability */}
-            <div className="card">
-              <h4 className="text-lg font-semibold text-secondary-900 mb-3">
+          <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-green-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+            </div>
+            <h4 className="text-xl font-bold text-secondary-900 mb-3">
                 Dostępność
               </h4>
-              <p className="text-secondary-600 mb-4">
+            <p className="text-secondary-600 mb-4 text-sm leading-relaxed">
                 Jestem dostępna do nowych projektów i współpracy. 
                 Odpowiadam na wiadomości w ciągu 24 godzin.
               </p>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm text-green-600 font-medium">Dostępny do projektów</span>
-              </div>
+            <div className="inline-flex items-center px-3 py-1 bg-white rounded-full shadow-sm">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
+              <span className="text-green-600 font-medium text-sm">Dostępna do projektów</span>
             </div>
           </div>
         </div>

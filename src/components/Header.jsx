@@ -18,12 +18,11 @@ const Header = () => {
     { name: 'Strona główna', href: '#home' },
     { name: 'O mnie', href: '#about' },
     { name: 'Projekty', href: '#projects' },
-    { name: 'Analiza danych', href: '#data-visualization' },
     { name: 'Kontakt', href: '#contact' },
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/katarzyna-ciupek-kownacka-398a4a257/', label: 'LinkedIn' },
   ];
 
   return (

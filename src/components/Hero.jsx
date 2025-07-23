@@ -63,7 +63,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12 animate-slide-up">
             <a
-              href="https://linkedin.com"
+                              href="https://www.linkedin.com/in/katarzyna-ciupek-kownacka-398a4a257/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary-500 hover:text-primary-600 transition-colors duration-200"
