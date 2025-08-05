@@ -41,7 +41,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-secondary-600 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up">
-          Łączę doświadczenie medyczne z HR i analizą biznesową. Rozwijam kompetencje w zarządzaniu projektami, metodykach Agile/Scrum oraz efektywnego zarządzania czasem w dynamicznym środowisku
+          Chcę połączyć doświadczenie medyczne z HR i analizą. Rozwijam kompetencje w zarządzaniu projektami, metodykach Agile/Scrum oraz efektywnego zarządzania czasem w dynamicznym środowisku.
           </p>
 
           {/* CTA Buttons */}

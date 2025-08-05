@@ -46,22 +46,17 @@ const About = () => {
     {
       icon: FaUsers,
       title: 'Rozwój pracowników',
-      description: 'Pasjonuje mnie wspieranie ludzi w ich rozwoju zawodowym i osobistym.'
+      description: 'Satysfakcjonuje mnie bycie wspierciem dla ludzi w ich rozwoju zawodowym i osobistym.'
     },
     {
       icon: FaChartLine,
       title: 'Analiza danych HR',
-      description: 'Uwielbiam odkrywać wzorce w danych i przekładać je na działania.'
+      description: 'Ciekawi mnie przekładanie danych  na praktyczne działania.'
     },
     {
       icon: FaComments,
       title: 'Komunikacja',
-      description: 'Tworzę skuteczne strategie komunikacji wewnętrznej.'
-    },
-    {
-      icon: FaHandshake,
-      title: 'Budowanie kultury',
-      description: 'Pomagam organizacjom tworzyć pozytywne środowisko pracy.'
+      description: 'Widzę duży potencjał w budowaniu skutecznej komunikacji wewnętrznej w firmie.'
     },
   ];
 
@@ -76,9 +71,9 @@ const About = () => {
   const education = [
     {
       title: 'Studia podyplomowe - Analiza biznesowa',
-      institution: 'Uniwersytet',
-      period: 'aktualnie',
-      status: 'W trakcie'
+      institution: 'Wyższa szkoła kształcenia zawodowego',
+      period: '2024 - 2025 r.',
+      status: 'Ukończone'
     },
     {
       title: 'Położnictwo I stopnia',
@@ -122,7 +117,7 @@ const About = () => {
                   <FaGraduationCap className="w-6 h-6 text-blue-600" />
                 </div>
                 <p className="text-secondary-700 leading-relaxed text-center">
-                  Rozwijam swoje kompetencje na <strong>studiach podyplomowych z analizy biznesowej</strong>. 
+                  Ukonczyłam studia podyplomowe z <strong>analizy biznesowej</strong>. 
                   Posiadam podstawową wiedzę z zakresu zarządzania projektami oraz metodyk 
                   zwinnych <strong>Agile/Scrum</strong>, potwierdzoną certyfikatami.
                 </p>
@@ -144,9 +139,7 @@ const About = () => {
                   <FaChartLine className="w-6 h-6 text-purple-600" />
                 </div>
                 <p className="text-secondary-700 leading-relaxed text-center">
-                  Łączę <strong>doświadczenie medyczne z pasją do HR</strong> i analizy biznesowej. 
-                  Wierzę w systematyczne podejście oparte na <strong>danych i skutecznej komunikacji</strong> 
-                  w budowaniu pozytywnego środowiska pracy.
+                  Chcę połączyć doświadczenie medyczne z  HR i analizą. Wierzę w systematyczne podejście oparte na <strong>danych i skutecznej komunikacji</strong> w budowaniu pozytywnego środowiska pracy. 
                 </p>
               </div>
             </div>
@@ -228,20 +221,43 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {interests.map((interest, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200 group">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-                  <interest.icon className="w-8 h-8 text-primary-600" />
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {interests.slice(0, 2).map((interest, index) => {
+                const Icon = interest.icon;
+                return (
+                  <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200 group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+                      <Icon className="w-8 h-8 text-primary-600" />
+                    </div>
+                    <h4 className="text-xl font-bold text-secondary-900 mb-4">
+                      {interest.title}
+                    </h4>
+                    <p className="text-secondary-600 leading-relaxed">
+                      {interest.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+            {interests.length > 2 && (() => {
+              const LastIcon = interests[2].icon;
+              return (
+                <div className="flex justify-center">
+                  <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200 group md:w-1/2 mx-auto">
+                    <div className="w-16 h-16 bg-gradient-to-r from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+                      <LastIcon className="w-8 h-8 text-primary-600" />
+                    </div>
+                    <h4 className="text-xl font-bold text-secondary-900 mb-4">
+                      {interests[2].title}
+                    </h4>
+                    <p className="text-secondary-600 leading-relaxed">
+                      {interests[2].description}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold text-secondary-900 mb-4">
-                  {interest.title}
-                </h4>
-                <p className="text-secondary-600 leading-relaxed">
-                  {interest.description}
-                </p>
-              </div>
-            ))}
+              );
+            })()}
           </div>
         </div>
 
