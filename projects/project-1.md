@@ -14,7 +14,6 @@ Zaplanowanie i stworzenie materiałów komunikacyjnych dla fikcyjnej inicjatywy 
 - Napisanie treści maila zapowiadającego wydarzenie do wszystkich pracowników
 - Zaprojektowanie dwóch prostych, przyciągających wzrok plakatów w Canvie
 - Przygotowanie harmonogramu komunikacji (kiedy i co publikujemy)
-- Stworzenie ankiety oceny wyzwania firmowego
 
 ## Wiadomość do pracowników 
 ![Plakat promocyjny - Wersja z medytacją](email1.png)
@@ -111,7 +110,5 @@ Zaplanowanie i stworzenie materiałów komunikacyjnych dla fikcyjnej inicjatywy 
 ## Wyniki
 
 - Gotowe do użycia szablony komunikacyjne
-- Check lista Onboardingowa: Pierwszy Dzień     
 - Materiały wizualne (plakaty) w 2 wersjach
-- Ankieta oceniająca "Tydzień obrego Samopoczucia"
 - Harmonogram publikacji z dokładnymi terminami

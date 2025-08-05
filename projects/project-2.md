@@ -15,7 +15,7 @@ Przeprowadzono anonimową ankietę online za pośrednictwem Google Forms, skiero
 ---
 
   
-## Stopień zaawansowania w stosunku do stażu pracy
+## Stopień zaawansowania Microsoft Excel w stosunku do stażu pracy ( Skala od 1 do 5)
 ![Plakat promocyjny - Wersja z medytacją](wykres1.png)
 **Wykres przedstawia poziom znajomości programu MS Excel deklarowany przez respondentów, z podziałem na długość ich stażu pracy. Ocena znajomości wspomnianego programu była od 1 do 5, gdzie 1 to podstawowy a 5 to Eksperci. Zauważalna jest dominacja ocen 2 i 3 (podstawowy/średniozaawansowany) w grupie nowo zatrudnionych (<6 mies.) oraz tych z 1-3 letnim stażem.**
 
@@ -28,9 +28,7 @@ Przeprowadzono anonimową ankietę online za pośrednictwem Google Forms, skiero
 ## Największe przeszkody w rozwijaniu kompetencji zawodowych  w stosunku do stażu pracy
 
 ![Plakat promocyjny - Wersja z medytacją](wykres2.png)
-**Wykres ilustruje główne bariery, które pracownicy napotykają w swoim rozwoju zawodowym.**  
-
-**W każdej grupie stażowej, "Brak czasu na uczestnictwo w szkoleniach" jest kluczową przeszkodą.**
+**Wykres ilustruje główne bariery, które pracownicy napotykają w swoim rozwoju zawodowym. W grupie z stażem <6 mies. oraz 1 rok-3 lat , "Brak czasu na uczestnictwo w szkoleniach" jest kluczową przeszkodą.**
 
 ---
 ---
